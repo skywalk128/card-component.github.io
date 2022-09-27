@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+}
+
+p {
+  font-size: 18px;
+}
+
+main {
+  margin: 100px auto;
+  width: 350px;
+  height: 600px;
+  background-color: hsl(216, 50%, 16%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.picture {
+  position: relative;
+  overflow: hidden;
+}
+
+.picture > svg {
+  display: none;
+}
+
+.picture > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.picture:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%);
+  content: "";
+  /* transition: all 1s ease; */
+  transform: translateY(-100%);
+  color: #fff;
+  opacity: 0.6;
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.picture:hover:after {
+  transform: translateY(0);
+}
+
+article > h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Outfit;
+  color: hsl(0, 0%, 100%);
+}
+
+article > h2:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+article p:nth-of-type(1) {
+  margin-bottom: 20px;
+  color: hsl(215, 32%, 27%);
+}
+
+article p:nth-of-type(2) {
+  margin-bottom: 20px;
+  color: hsl(178, 100%, 50%);
+  font-size: 16px;
+}
+
+.content-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+.content-bottom span {
+  font-size: 16px;
+  color: hsl(215, 51%, 70%);
+}
+
+.content-bottom svg {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+hr {
+  color: hsl(215, 32%, 27%);
+  border: 1px solid hsl(215, 32%, 27%);
+  background-color: hsl(215, 32%, 27%);
+}
+
+.bottom {
+  display: flex;
+  margin-top: 10px;
+  padding-top: 10px;
+  align-items: center;
+}
+
+.bottom > img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.bottom span {
+  display: block;
+  color: hsl(215, 51%, 70%);
+  margin-left: 10px;
+}
+
+.bottom strong {
+  color: hsl(0, 0%, 100%);
+}
+
+.bottom strong:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 100%;
+    margin: 50px auto;
+  }
+}
+
+.attribution {
+  margin-top: 200px;
+}
